@@ -119,6 +119,7 @@ The voice is personal and observant. It uses only details published by Haven Poi
 - `--focus-ring-on-dark: var(--color-coral)` — focus on bay and bay-dark surfaces; 5.26:1 and 6.45:1 respectively.
 - `--focus-ring-on-coral: var(--color-bay-dark)` — focus on coral surfaces; 6.45:1.
 - `--text-index-on-light: var(--color-potager)` — small field-guide indices on salt; 5.49:1.
+- `--text-on-coral: var(--color-bay-dark)` — small utility text on coral; 6.45:1.
 - `--focus-ring-color` is the contextual alias inherited by controls; light surfaces are the default, with dark and coral sections overriding it.
 
 ### Typography
@@ -170,6 +171,8 @@ Desktop uses deliberate asymmetry rather than a repeated card grid. Tablet colla
 ## Signature
 
 The signature element is the **tide line**: a thin coral rule that begins beside the hero eyebrow, passes through numbered field-guide labels, and returns as an edge marker on photography. It evokes chart marks and garden rows without drawing literal anchors, waves, or leaves.
+
+The favicon is a non-logo utility tile derived from the same bay-and-coral tide-line motif; the typographic wordmark remains the only business mark.
 
 ## Interaction and accessibility
 

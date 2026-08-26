@@ -29,6 +29,7 @@
   --focus-ring-on-dark: var(--color-coral);
   --focus-ring-on-coral: var(--color-bay-dark);
   --text-index-on-light: var(--color-potager);
+  --text-on-coral: var(--color-bay-dark);
   --focus-ring-color: var(--focus-ring-on-light);
   --font-display: "Newsreader", Georgia, serif;
   --font-body: "Manrope", "Helvetica Neue", Arial, sans-serif;
@@ -948,7 +949,7 @@ section[id] {
 }
 
 .booking .section-index {
-  color: color-mix(in srgb, var(--color-bay-dark) 70%, transparent);
+  color: var(--text-on-coral);
 }
 
 .booking .section-index::before {
