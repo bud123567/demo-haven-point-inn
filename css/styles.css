@@ -25,6 +25,11 @@
   --color-line: #c9d7d2;
   --color-muted: #526764;
   --color-white: #ffffff;
+  --focus-ring-on-light: var(--color-bay-dark);
+  --focus-ring-on-dark: var(--color-coral);
+  --focus-ring-on-coral: var(--color-bay-dark);
+  --text-index-on-light: var(--color-potager);
+  --focus-ring-color: var(--focus-ring-on-light);
   --font-display: "Newsreader", Georgia, serif;
   --font-body: "Manrope", "Helvetica Neue", Arial, sans-serif;
   --space-1: 0.25rem;
@@ -133,7 +138,7 @@ section[id] {
 }
 
 :focus-visible {
-  outline: 0.1875rem solid var(--color-coral);
+  outline: 0.1875rem solid var(--focus-ring-color);
   outline-offset: 0.25rem;
 }
 
@@ -281,7 +286,10 @@ section[id] {
   letter-spacing: 0.06em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
 }
 
 .header-action:hover {
@@ -324,6 +332,8 @@ section[id] {
 }
 
 .hero {
+  --focus-ring-color: var(--focus-ring-on-dark);
+
   background: var(--color-bay);
   color: var(--color-salt);
 }
@@ -421,7 +431,11 @@ section[id] {
   line-height: 1.2;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, translate 180ms ease;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    translate 180ms ease;
 }
 
 .button--coral {
@@ -450,7 +464,8 @@ section[id] {
   margin-block-start: clamp(3rem, 7vw, 5rem);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-block-start: 1px solid color-mix(in srgb, var(--color-salt) 30%, transparent);
+  border-block-start: 1px solid
+    color-mix(in srgb, var(--color-salt) 30%, transparent);
 }
 
 .hero-facts div {
@@ -701,7 +716,10 @@ section[id] {
 
 .section-heading {
   display: grid;
-  grid-template-columns: minmax(12rem, 0.35fr) minmax(0, 0.9fr) minmax(16rem, 0.5fr);
+  grid-template-columns: minmax(12rem, 0.35fr) minmax(0, 0.9fr) minmax(
+      16rem,
+      0.5fr
+    );
   gap: clamp(2rem, 5vw, 5rem);
   align-items: end;
   margin-block-end: var(--space-8);
@@ -759,7 +777,7 @@ section[id] {
 }
 
 .atlas-number {
-  color: var(--color-coral);
+  color: var(--text-index-on-light);
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -832,6 +850,8 @@ section[id] {
 }
 
 .rock-hall {
+  --focus-ring-color: var(--focus-ring-on-dark);
+
   background: var(--color-bay);
   color: var(--color-salt);
 }
@@ -886,7 +906,8 @@ section[id] {
 
 .place-list {
   margin-block-start: var(--space-7);
-  border-block-end: 1px solid color-mix(in srgb, var(--color-salt) 25%, transparent);
+  border-block-end: 1px solid
+    color-mix(in srgb, var(--color-salt) 25%, transparent);
 }
 
 .place-list div {
@@ -894,7 +915,8 @@ section[id] {
   grid-template-columns: minmax(8rem, 0.4fr) minmax(0, 1fr);
   gap: var(--space-5);
   padding-block: 1.2rem;
-  border-block-start: 1px solid color-mix(in srgb, var(--color-salt) 25%, transparent);
+  border-block-start: 1px solid
+    color-mix(in srgb, var(--color-salt) 25%, transparent);
 }
 
 .place-list dt {
@@ -912,6 +934,8 @@ section[id] {
 }
 
 .booking {
+  --focus-ring-color: var(--focus-ring-on-coral);
+
   background: var(--color-coral);
   color: var(--color-bay-dark);
 }
@@ -948,7 +972,8 @@ section[id] {
 }
 
 .booking-actions {
-  border-block-end: 1px solid color-mix(in srgb, var(--color-bay-dark) 35%, transparent);
+  border-block-end: 1px solid
+    color-mix(in srgb, var(--color-bay-dark) 35%, transparent);
 }
 
 .booking-primary,
@@ -959,9 +984,13 @@ section[id] {
   justify-content: space-between;
   gap: var(--space-5);
   padding: 1.25rem 1.5rem;
-  border-block-start: 1px solid color-mix(in srgb, var(--color-bay-dark) 35%, transparent);
+  border-block-start: 1px solid
+    color-mix(in srgb, var(--color-bay-dark) 35%, transparent);
   text-decoration: none;
-  transition: background-color 180ms ease, color 180ms ease, padding-inline 180ms ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    padding-inline 180ms ease;
 }
 
 .booking-primary {
@@ -998,6 +1027,8 @@ section[id] {
 }
 
 .site-footer {
+  --focus-ring-color: var(--focus-ring-on-dark);
+
   padding-block: var(--space-8);
   background: var(--color-bay-dark);
   color: var(--color-salt);
@@ -1157,7 +1188,7 @@ section[id] {
 }
 
 .mobile-menu nav a span {
-  color: var(--color-coral);
+  color: var(--text-index-on-light);
   font-family: var(--font-body);
   font-size: 0.66rem;
   font-weight: 700;
@@ -1406,7 +1437,8 @@ section[id] {
     align-items: center;
     gap: var(--space-3);
     padding-block: 0.65rem;
-    border-block-end: 1px solid color-mix(in srgb, var(--color-salt) 18%, transparent);
+    border-block-end: 1px solid
+      color-mix(in srgb, var(--color-salt) 18%, transparent);
   }
 
   .hero-facts dd {

@@ -11,13 +11,20 @@
   const menuLinks = menu.querySelectorAll("nav a");
   const inertRegions = document.querySelectorAll("[data-inert-on-menu]");
   const desktopQuery = window.matchMedia("(min-width: 60rem)");
-  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const reducedMotionQuery = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  );
   let isOpen = false;
   let closeTimer = null;
 
-  const focusableItems = () => Array.from(
-    menu.querySelectorAll("a[href], button:not([disabled]):not([tabindex='-1'])")
-  ).filter((item) => !item.hidden && item.getAttribute("aria-hidden") !== "true");
+  const focusableItems = () =>
+    Array.from(
+      menu.querySelectorAll(
+        "a[href], button:not([disabled]):not([tabindex='-1'])",
+      ),
+    ).filter(
+      (item) => !item.hidden && item.getAttribute("aria-hidden") !== "true",
+    );
 
   const setBackgroundInert = (value) => {
     inertRegions.forEach((region) => {
@@ -59,9 +66,12 @@
     document.body.classList.remove("menu-open");
     setBackgroundInert(false);
 
-    closeTimer = window.setTimeout(() => {
-      menu.hidden = true;
-    }, reducedMotionQuery.matches ? 0 : 240);
+    closeTimer = window.setTimeout(
+      () => {
+        menu.hidden = true;
+      },
+      reducedMotionQuery.matches ? 0 : 240,
+    );
 
     if (restoreFocus) {
       toggle.focus();
@@ -103,7 +113,9 @@
 
   document.addEventListener("hpi:open-menu", openMenu);
   document.addEventListener("hpi:close-menu", () => closeMenu());
-  menuLinks.forEach((link) => link.addEventListener("click", () => closeMenu()));
+  menuLinks.forEach((link) =>
+    link.addEventListener("click", () => closeMenu()),
+  );
   document.addEventListener("keydown", handleMenuKeys);
 
   desktopQuery.addEventListener("change", (event) => {

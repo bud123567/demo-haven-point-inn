@@ -16,13 +16,13 @@ colors:
 typography:
   display-xl:
     fontFamily: Newsreader
-    fontSize: 118px
+    fontSize: 108px
     fontWeight: 500
     lineHeight: 0.9
     letterSpacing: -0.045em
   display-lg:
     fontFamily: Newsreader
-    fontSize: 76px
+    fontSize: 80px
     fontWeight: 500
     lineHeight: 0.96
     letterSpacing: -0.035em
@@ -115,12 +115,17 @@ The voice is personal and observant. It uses only details published by Haven Poi
 - `--color-line: #C9D7D2` — frames, rules, and dividers.
 - `--color-muted: #526764` — secondary copy.
 - `--color-white: #FFFFFF` — accessible reverse text and image labels.
+- `--focus-ring-on-light: var(--color-bay-dark)` — focus on salt and foam surfaces; 13.22:1 and 12.06:1 respectively.
+- `--focus-ring-on-dark: var(--color-coral)` — focus on bay and bay-dark surfaces; 5.26:1 and 6.45:1 respectively.
+- `--focus-ring-on-coral: var(--color-bay-dark)` — focus on coral surfaces; 6.45:1.
+- `--text-index-on-light: var(--color-potager)` — small field-guide indices on salt; 5.49:1.
+- `--focus-ring-color` is the contextual alias inherited by controls; light surfaces are the default, with dark and coral sections overriding it.
 
 ### Typography
 
 - `--font-display: "Newsreader", Georgia, serif` — editorial display face for the inn/gallery character.
 - `--font-body: "Manrope", "Helvetica Neue", Arial, sans-serif` — clear utility and body face.
-- Display range: `clamp(3.25rem, 7.8vw, 7.4rem)` for the hero and `clamp(2.4rem, 5vw, 4.8rem)` for section titles.
+- Display range: `clamp(3.7rem, 6.4vw, 6.75rem)` for the desktop hero and `clamp(2.7rem, 5.3vw, 5rem)` for section titles, with explicit tablet and mobile reductions.
 - Body range: `1rem` to `1.1875rem`, with a maximum readable line length of about 66 characters.
 - Utility labels: `0.75rem`, 700 weight, uppercase, with `0.14em` tracking; never used for long copy.
 
@@ -172,7 +177,7 @@ The signature element is the **tide line**: a thin coral rule that begins beside
 - Primary action always opens the verified Eviivo availability URL. Phone and email are real links.
 - Mobile navigation is a modal drawer with an inert background, focus trap, Escape close, backdrop close, and focus restoration.
 - Native anchors and buttons only; no clickable `div` elements and no placeholder links.
-- Visible `:focus-visible` treatment, 44-pixel minimum touch targets, semantic landmarks, descriptive image alternatives, and a skip link.
+- Visible `:focus-visible` treatment uses semantic surface tokens with at least 3:1 adjacent-color contrast; small index text maintains at least 4.5:1. Controls use 44-pixel minimum touch targets, semantic landmarks, descriptive image alternatives, and a skip link.
 - Explicit image dimensions and aspect ratios prevent layout shift.
 - Scroll reveals are progressive enhancement only; all content remains visible if JavaScript is unavailable.
 - `prefers-reduced-motion: reduce` removes animated transitions and smooth scrolling.
